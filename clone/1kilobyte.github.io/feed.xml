@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-25T01:15:43+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">./ariandy-random</title><subtitle>Semper Infidelis</subtitle><author><name>1kb</name></author><entry><title type="html">Quantum &amp;amp; Superposition</title><link href="http://localhost:4000/journal/Quantum-Computation.html" rel="alternate" type="text/html" title="Quantum &amp; Superposition" /><published>2018-11-11T00:00:00+08:00</published><updated>2018-11-11T00:00:00+08:00</updated><id>http://localhost:4000/journal/Quantum-Computation</id><content type="html" xml:base="http://localhost:4000/journal/Quantum-Computation.html">&lt;p&gt;Banyak orang yang menyalahpahami bahwa ilmu berkaitan dengan Komputasi Quantum terdengar seperti &lt;em&gt;lo-fi hip-hop&lt;/em&gt; dari Mamang Kesbor, mengawang-awang. Ditambah lagi bahwa terkadang saya kurang puas dengan penjelasan dari buku-buku pop-science yang mencoba menjelaskan &lt;em&gt;Superposition&lt;/em&gt;. Padahal sejatinya Komputasi Quantum adalah ilmu yang aksesibel dan dapat dipelajari dimana pun selama anda mampu menggunakan Google-Fu dengan baik.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-22T07:58:32+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">./ariandy-random</title><subtitle>Semper Infidelis</subtitle><author><name>1kb</name></author><entry><title type="html">Quantum &amp;amp; Superposition</title><link href="http://localhost:4000/journal/Quantum-Computation.html" rel="alternate" type="text/html" title="Quantum &amp; Superposition" /><published>2018-11-11T00:00:00+08:00</published><updated>2018-11-11T00:00:00+08:00</updated><id>http://localhost:4000/journal/Quantum-Computation</id><content type="html" xml:base="http://localhost:4000/journal/Quantum-Computation.html">&lt;p&gt;Banyak orang yang menyalahpahami bahwa ilmu berkaitan dengan Komputasi Quantum terdengar seperti &lt;em&gt;lo-fi hip-hop&lt;/em&gt; dari Mamang Kesbor, mengawang-awang. Ditambah lagi bahwa terkadang saya kurang puas dengan penjelasan dari buku-buku pop-science yang mencoba menjelaskan &lt;em&gt;Superposition&lt;/em&gt;. Padahal sejatinya Komputasi Quantum adalah ilmu yang aksesibel dan dapat dipelajari dimana pun selama anda mampu menggunakan Google-Fu dengan baik.&lt;/p&gt;
 
 &lt;p&gt;Tulisan ini akan mencoba menjelaskan secara singkat bahwa bagian mendasar dari Komputasi Quantum (setidaknya &lt;em&gt;Superposition&lt;/em&gt;) dapat mudah dimengerti, dengan catatan anda mengerti sedikit tentang bilangan biner, geometri, probabilitas dan menghitung matrix.&lt;/p&gt;
 
@@ -45,20 +45,13 @@ Notasi ini dikenal sebagai Notasi Dirac. Notasi ini menggambarkan keadaan 1 Qubi
 Tentunya kita bisa menuliskan menjadi,&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;
-  \alpha ^2 = 50\% = \left(\sqrt \frac{1}{2}\right) ^2
+  50\% = \left(\sqrt \frac{1}{2}\right) ^2 = \frac{1}{\sqrt 2}
 &lt;/script&gt;
 
-&lt;p&gt;Maka,
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-  \alpha = \sqrt \frac{1}{2}
-&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;Dan ini pun berlaku pula pada &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt;.&lt;/p&gt;
-
-&lt;p&gt;Oleh karenanya, kita bisa menuliskan contoh kasus di atas menjadi seperti berikut.&lt;/p&gt;
+&lt;p&gt;Maka, kita bisa menuliskan contoh kasus di atas menjadi seperti berikut.&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;
-  |\psi \rangle = \frac{1}{\sqrt 2} |0 \rangle + \frac{1}{\sqrt 2} |1 \rangle
+  \frac{1}{\sqrt 2} |0 \rangle + \frac{1}{\sqrt 2} |1 \rangle
 &lt;/script&gt;
 
 &lt;p&gt;Jadinya, kita baru saja merubahnya menjadi seperti berikut.&lt;/p&gt;

@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>
+    
+      Realtek RTL8821AE on Debian | ./ariandy-random
+    
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="./ariandy-random" />
+  <!-- Use RSS-2.0 -->
+  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="./ariandy-random | Semper Infidelis"/>
+  //-->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-112060364-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Realtek RTL8821AE on Debian | ./ariandy-random</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Realtek RTL8821AE on Debian" />
+<meta name="author" content="1kb" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Case Wi-Fi signal pada Asus E202S lemah" />
+<meta property="og:description" content="Case Wi-Fi signal pada Asus E202S lemah" />
+<link rel="canonical" href="http://localhost:4000/2018/03/17/realtek-repair.html" />
+<meta property="og:url" content="http://localhost:4000/2018/03/17/realtek-repair.html" />
+<meta property="og:site_name" content="./ariandy-random" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-03-17T21:00:00+08:00" />
+<script type="application/ld+json">
+{"description":"Case Wi-Fi signal pada Asus E202S lemah","author":{"@type":"Person","name":"1kb"},"@type":"BlogPosting","url":"http://localhost:4000/2018/03/17/realtek-repair.html","headline":"Realtek RTL8821AE on Debian","dateModified":"2018-03-17T21:00:00+08:00","datePublished":"2018-03-17T21:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/03/17/realtek-repair.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+
+<body>
+
+  <div class="container">
+    <header class="masthead">
+  <h3 class="masthead-title">
+    <a href="/">./ariandy-random</a>
+    <small class="masthead-subtitle">Semper Infidelis</small>
+    <div class="menu">
+  <nav class="menu-content">
+    
+      <a href="/menu/about.html">About</a>
+    
+      <a href="/menu/writing.html">Writing</a>
+    
+      <a href="/menu/contact.html">Contact</a>
+    
+  </nav>
+  <nav class="social-icons">
+    
+  
+  
+    <a href="https://www.github.com/1kilobyte" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:ariandylinux@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+  
+
+  </nav>
+</div>
+
+  </h3>
+</header>
+
+
+    <div class="post-container">
+      <h1>
+  Realtek RTL8821AE on Debian
+</h1>
+
+
+
+<h3 id="case">Case</h3>
+<ul>
+  <li>Wi-Fi signal pada Asus E202S lemah</li>
+</ul>
+
+<h3 id="analyze">Analyze</h3>
+<p>Pada beberapa kasus, Wi-Fi card dilengkapi dengan 2 antena, namun yang diaktifkan oleh drivernya adalah antena yang lemah. Maka driver Realtek harus diinstall kembali dengan memilih antena yang lebih kuat.</p>
+
+<p>Untuk mengetahui driver yang digunakan, gunakan perintah :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsmod | grep rtl[0-9]
+</code></pre></div></div>
+<p>Output dengan angka tersebut merupakan nama dari driver yang kita perlukan.</p>
+<h3 id="installation">Installation</h3>
+<ul>
+  <li>Download driver Realtek dari <code class="highlighter-rouge">git</code>. Dan install driver tersebut.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/lwfinger/rtlwifi_new
+cd rtlwifi_new
+sudo make install
+sudo modprobe -rv rtl8821ae
+sudo modprobe -v rtl8821ae ant_sel=2
+</code></pre></div></div>
+<p>Jika tidak ada perubahan, ubah <code class="highlighter-rouge">ant_sel=2</code> ke <code class="highlighter-rouge">ant_sel=1</code></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo modprobe -v rtl8821ae ant_sel=1
+</code></pre></div></div>
+
+<p>Jika telah berhasil, (misal dengan <code class="highlighter-rouge">ant_sel=2</code>), buat perintah agar menjadi permanen.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "options rtl8821ae ant_sel=2" | sudo tee /etc/modprobe.d/50-rtl8821ae.conf
+</code></pre></div></div>
+<h3 id="notes">Notes</h3>
+<ul>
+  <li>Ubah nilai <code class="highlighter-rouge">ant_sel</code> sesuai antena yang kuat.</li>
+  <li>Update sistem operasi dapat menghilangkan konfigurasi. Untuk itu, buat Bash script (tanpa baris <code class="highlighter-rouge">git</code>) untuk dijalankan setelah update sistem operasi dijalankan.</li>
+  <li>Pada beberapa kasus, Wi-Fi tidak bisa digunakan di saat bluetooth aktif.</li>
+</ul>
+
+
+<span class="post-date">
+  Written on
+  
+  March
+  17th,
+  2018
+  by
+  
+    1kb
+  
+</span>
+
+<div class="post-date">Feel free to share!</div>
+  <div class="sharing-icons">
+    <a href="https://twitter.com/intent/tweet?text=Realtek RTL8821AE on Debian&amp;url=/2018/03/17/realtek-repair.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=/2018/03/17/realtek-repair.html&amp;title=Realtek RTL8821AE on Debian" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="https://plus.google.com/share?url=/2018/03/17/realtek-repair.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+
+<div class="related">
+  <h1 >You may also enjoy:</h1>
+  
+  <ul class="related-posts">
+    
+  </ul>
+</div>
+
+
+
+
+    </div>
+
+    <footer class="footer">
+  
+  
+  
+    <a href="https://www.github.com/1kilobyte" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:ariandylinux@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+  
+
+  <div class="post-date"><a href="/menu/about.html">./ariandy-random | Semper Infidelis by 1kb</a></div>
+</footer>
+
+  </div>
+
+</body>
+</html>
