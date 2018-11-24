@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>./ariandy-random</title>
+		<description>Semper Infidelis</description>
+		<link></link>
+		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Quantum &amp; Superposition</title>
+				
+					<dc:creator>1kb</dc:creator>
+				
+				
+					<description>&lt;p&gt;Banyak orang yang menyalahpahami bahwa ilmu berkaitan dengan Komputasi Quantum terdengar seperti &lt;em&gt;lo-fi hip-hop&lt;/em&gt; dari Mamang Kesbor, mengawang-awang. Ditambah lagi bahwa terkadang saya kurang puas dengan penjelasan dari buku-buku pop-science yang mencoba menjelaskan &lt;em&gt;Superposition&lt;/em&gt;. Padahal sejatinya Komputasi Quantum adalah ilmu yang aksesibel dan dapat dipelajari dimana pun selama anda mampu menggunakan Google-Fu dengan baik.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Sun, 11 Nov 2018 00:00:00 +0800</pubDate>
+				<link>http://localhost:4000/journal/Quantum-Computation.html</link>
+				<guid isPermaLink="true">http://localhost:4000/journal/Quantum-Computation.html</guid>
+			</item>
+		
+			<item>
+				<title>Piratebox 1.1.4 on OpenWrt TP-Link MR-3020</title>
+				
+				
+					<description>&lt;h3 id=&quot;case&quot;&gt;Case&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;TP-Link MR-3020 sebelumnya pernah terinstall Piratebox. Namun ingin dilakukan fresh install karena lupa password untuk mengakses ke OpenWrt.&lt;/li&gt;
+  &lt;li&gt;P1 sebelumnya telah disolder dengan male pin.&lt;/li&gt;
+  &lt;li&gt;Ubah ke Piratebox 1.1.4&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+				
+				<pubDate>Sun, 18 Mar 2018 21:00:00 +0800</pubDate>
+				<link>http://localhost:4000/2018/03/18/piratebox-1.1.4.html</link>
+				<guid isPermaLink="true">http://localhost:4000/2018/03/18/piratebox-1.1.4.html</guid>
+			</item>
+		
+			<item>
+				<title>OpenWrt - Manual Method - Debricking TP-Link MR-3020</title>
+				
+				
+					<description>&lt;h3 id=&quot;case&quot;&gt;Case&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;TP-Link MR3020 bricked&lt;/li&gt;
+  &lt;li&gt;TP-Link MR3020 yang digunakan adalah versi lama&lt;/li&gt;
+  &lt;li&gt;P1 sebelumnya telah disolder dengan male pin.&lt;/li&gt;
+  &lt;li&gt;Perbarui OpenWrt&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+				
+				<pubDate>Sun, 18 Mar 2018 21:00:00 +0800</pubDate>
+				<link>http://localhost:4000/2018/03/18/debricking-mr3020.html</link>
+				<guid isPermaLink="true">http://localhost:4000/2018/03/18/debricking-mr3020.html</guid>
+			</item>
+		
+			<item>
+				<title>Realtek RTL8821AE on Debian</title>
+				
+				
+					<description>&lt;h3 id=&quot;case&quot;&gt;Case&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Wi-Fi signal pada Asus E202S lemah&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+				
+				<pubDate>Sat, 17 Mar 2018 21:00:00 +0800</pubDate>
+				<link>http://localhost:4000/2018/03/17/realtek-repair.html</link>
+				<guid isPermaLink="true">http://localhost:4000/2018/03/17/realtek-repair.html</guid>
+			</item>
+		
+			<item>
+				<title>chroot Jail (Repair GRUB)</title>
+				
+				
+					<description>&lt;h3 id=&quot;case&quot;&gt;Case&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;OS terinstall. Namun Grub tidak ada.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+				
+				<pubDate>Sat, 17 Mar 2018 20:00:00 +0800</pubDate>
+				<link>http://localhost:4000/2018/03/17/chroot-jail.html</link>
+				<guid isPermaLink="true">http://localhost:4000/2018/03/17/chroot-jail.html</guid>
+			</item>
+		
+			<item>
+				<title>elementary OS (Loki 0.4.1)</title>
+				
+				
+					<description>&lt;h3 id=&quot;case&quot;&gt;Case&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Grub rusak&lt;/li&gt;
+  &lt;li&gt;Partisi Linux Ext4 hilang&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+				
+				<pubDate>Fri, 16 Mar 2018 19:00:00 +0800</pubDate>
+				<link>http://localhost:4000/2018/03/16/elementary-os.html</link>
+				<guid isPermaLink="true">http://localhost:4000/2018/03/16/elementary-os.html</guid>
+			</item>
+		
+			<item>
+				<title>First !!!</title>
+				
+				
+					<description>&lt;p&gt;Ini post pertama. Sekedar penanda awal.&lt;/p&gt;
+</description>
+				
+				<pubDate>Thu, 15 Mar 2018 17:00:00 +0800</pubDate>
+				<link>http://localhost:4000/first.html</link>
+				<guid isPermaLink="true">http://localhost:4000/first.html</guid>
+			</item>
+		
+	</channel>
+</rss>

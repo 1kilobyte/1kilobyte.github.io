@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>
+    
+      Piratebox 1.1.4 on OpenWrt TP-Link MR-3020 | ./ariandy-random
+    
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="./ariandy-random" />
+  <!-- Use RSS-2.0 -->
+  <!--<link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="./ariandy-random | Semper Infidelis"/>
+  //-->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-112060364-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Piratebox 1.1.4 on OpenWrt TP-Link MR-3020 | ./ariandy-random</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Piratebox 1.1.4 on OpenWrt TP-Link MR-3020" />
+<meta name="author" content="1kb" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Case TP-Link MR-3020 sebelumnya pernah terinstall Piratebox. Namun ingin dilakukan fresh install karena lupa password untuk mengakses ke OpenWrt. P1 sebelumnya telah disolder dengan male pin. Ubah ke Piratebox 1.1.4" />
+<meta property="og:description" content="Case TP-Link MR-3020 sebelumnya pernah terinstall Piratebox. Namun ingin dilakukan fresh install karena lupa password untuk mengakses ke OpenWrt. P1 sebelumnya telah disolder dengan male pin. Ubah ke Piratebox 1.1.4" />
+<link rel="canonical" href="http://localhost:4000/2018/03/18/piratebox-1.1.4.html" />
+<meta property="og:url" content="http://localhost:4000/2018/03/18/piratebox-1.1.4.html" />
+<meta property="og:site_name" content="./ariandy-random" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-03-18T21:00:00+08:00" />
+<script type="application/ld+json">
+{"description":"Case TP-Link MR-3020 sebelumnya pernah terinstall Piratebox. Namun ingin dilakukan fresh install karena lupa password untuk mengakses ke OpenWrt. P1 sebelumnya telah disolder dengan male pin. Ubah ke Piratebox 1.1.4","author":{"@type":"Person","name":"1kb"},"@type":"BlogPosting","url":"http://localhost:4000/2018/03/18/piratebox-1.1.4.html","headline":"Piratebox 1.1.4 on OpenWrt TP-Link MR-3020","dateModified":"2018-03-18T21:00:00+08:00","datePublished":"2018-03-18T21:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/03/18/piratebox-1.1.4.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+
+<body>
+
+  <div class="container">
+    <header class="masthead">
+  <h3 class="masthead-title">
+    <a href="/">./ariandy-random</a>
+    <small class="masthead-subtitle">Semper Infidelis</small>
+    <div class="menu">
+  <nav class="menu-content">
+    
+      <a href="/menu/about.html">About</a>
+    
+      <a href="/menu/writing.html">Writing</a>
+    
+      <a href="/menu/contact.html">Contact</a>
+    
+  </nav>
+  <nav class="social-icons">
+    
+  
+  
+    <a href="https://www.github.com/1kilobyte" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:ariandylinux@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+  
+
+  </nav>
+</div>
+
+  </h3>
+</header>
+
+
+    <div class="post-container">
+      <h1>
+  Piratebox 1.1.4 on OpenWrt TP-Link MR-3020
+</h1>
+
+
+
+<h3 id="case">Case</h3>
+<ul>
+  <li>TP-Link MR-3020 sebelumnya pernah terinstall Piratebox. Namun ingin dilakukan fresh install karena lupa password untuk mengakses ke OpenWrt.</li>
+  <li>P1 sebelumnya telah disolder dengan male pin.</li>
+  <li>Ubah ke Piratebox 1.1.4</li>
+</ul>
+
+<h3 id="-update"><span style="color:red"> Update<span></span></span></h3>
+<p><span style="color:red"> Instruksi ini tidak berlaku terhadap TP-Link MR3020 yang baru (v3). Hanya untuk versi &lt;= v1.9<span></span></span></p>
+
+<h3 id="debricking">Debricking</h3>
+<p>Sebelum melakukan instruksi lebih lanjut, lakukan debricking terlebih dahulu. Adapun tutorial debricking dapat dilihat pada tautan <a href="/2018/03/18/debricking-mr3020.html">ini</a>.</p>
+
+<h3 id="hardware-requirements">Hardware Requirements</h3>
+<ul>
+  <li>Router TP-Link MR-3020</li>
+  <li>Kabel power untuk TP-Link MR-3020</li>
+  <li>Flashdisk 16GB (Harus USB 2)</li>
+</ul>
+
+<h3 id="software-requirements">Software Requirements</h3>
+<ul>
+  <li>Windows 10</li>
+  <li><a href="https://winscp.net/eng/download.php">Winscp</a></li>
+</ul>
+
+<h3 id="file-requirements">File Requirements</h3>
+<ul>
+  <li><a href="http://stable.openwrt.piratebox.de/auto/install_piratebox.zip">install_piratebox.zip</a></li>
+  <li><a href="http://stable.openwrt.piratebox.de/auto/openwrt-ar71xx-generic-tl-mr3020-v1-squashfs-factory.bin">Firmware OpenWrt untuk auto-install Piratebox</a></li>
+</ul>
+
+<h3 id="preparation">Preparation</h3>
+<ul>
+  <li>Arahkan switch MR3020 pada mode <strong>3G Mode</strong></li>
+  <li>Bersihkan isi dari Flashdisk (bila ada isinya).</li>
+  <li>Ekstrak <strong>install_piratebox.zip</strong> ke Flashdisk.</li>
+  <li>Jika selesai, eject Flashdisk.</li>
+</ul>
+
+<h3 id="winscp">Winscp</h3>
+<ul>
+  <li>Install Winscp.</li>
+  <li>Hubungkan laptop ke router yang telah terpasang OpenWrt via Wi-Fi.</li>
+  <li>Masukkan parameter sebagai berikut.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Parameter</th>
+      <th style="text-align: center">Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">File Protocol</td>
+      <td style="text-align: center">SCP</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Hostname</td>
+      <td style="text-align: center">192.168.1.1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">User name</td>
+      <td style="text-align: center">root</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Password</td>
+      <td style="text-align: center">(Bila telah menggunakan password, maka harus diisi)</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Rename image OpenWrt yang khusus untuk auto-install Piratebox dengan nama <code class="highlighter-rouge">openpirate.bin</code>.</li>
+  <li>Pada Winscp, pindahkan <code class="highlighter-rouge">openpirate.bin</code> ke <code class="highlighter-rouge">/tmp</code>.</li>
+  <li>Jika telah selesai memindahkan, keluar dari Winscp. Biarkan MR3020 tetap menyala.</li>
+</ul>
+
+<h3 id="installation">Installation</h3>
+<ul>
+  <li>Gunakan PuTTY, masuk ke <code class="highlighter-rouge">192.168.1.1</code>.</li>
+  <li>Masuk ke <code class="highlighter-rouge">/tmp</code></li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /tmp
+</code></pre></div></div>
+
+<ul>
+  <li>Setelahnya, jalankan perintah <code class="highlighter-rouge">sysupgrade</code>.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sysupgrade -n openpirate.bin
+</code></pre></div></div>
+
+<ul>
+  <li>Tunggu sampai MR3020 restart 2 kali. Untuk proses retart yang dilakukan router, perhatikan lampu atau akses Serial Putty. Jika akses Serial terhenti, artinya router telah merestart. Masuk lagi ke Serial, dan tunggu sekali lagi.</li>
+  <li>Jika telah selesai, cabut dari MR3020 dari catu daya.</li>
+</ul>
+
+<h3 id="plug--pray">Plug &amp; Pray</h3>
+<ul>
+  <li>Pasangkan Flashdisk ke MR3020 dan hubungkan kembali ke catu daya.</li>
+  <li>Tunggu sekitar 50 menit. <strong>Jangan sampai pada proses ini MR3020 kehilangan daya. Jika terjadi, MR3020 akan brick, dan harus di-debrick dari awal.</strong></li>
+  <li>Selesai. Piratebox telah bisa digunakan.</li>
+</ul>
+
+
+
+<span class="post-date">
+  Written on
+  
+  March
+  18th,
+  2018
+  by
+  
+    1kb
+  
+</span>
+
+<div class="post-date">Feel free to share!</div>
+  <div class="sharing-icons">
+    <a href="https://twitter.com/intent/tweet?text=Piratebox 1.1.4 on OpenWrt TP-Link MR-3020&amp;url=/2018/03/18/piratebox-1.1.4.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=/2018/03/18/piratebox-1.1.4.html&amp;title=Piratebox 1.1.4 on OpenWrt TP-Link MR-3020" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="https://plus.google.com/share?url=/2018/03/18/piratebox-1.1.4.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+
+<div class="related">
+  <h1 >You may also enjoy:</h1>
+  
+  <ul class="related-posts">
+    
+  </ul>
+</div>
+
+
+
+
+    </div>
+
+    <footer class="footer">
+  
+  
+  
+    <a href="https://www.github.com/1kilobyte" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="mailto:ariandylinux@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+
+  
+  
+    <a href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+  
+
+  <div class="post-date"><a href="/menu/about.html">./ariandy-random | Semper Infidelis by 1kb</a></div>
+</footer>
+
+  </div>
+
+</body>
+</html>

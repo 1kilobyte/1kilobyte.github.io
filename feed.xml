@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-22T07:58:32+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">./ariandy-random</title><subtitle>Semper Infidelis</subtitle><author><name>1kb</name></author><entry><title type="html">Quantum &amp;amp; Superposition</title><link href="http://localhost:4000/journal/Quantum-Computation.html" rel="alternate" type="text/html" title="Quantum &amp; Superposition" /><published>2018-11-11T00:00:00+08:00</published><updated>2018-11-11T00:00:00+08:00</updated><id>http://localhost:4000/journal/Quantum-Computation</id><content type="html" xml:base="http://localhost:4000/journal/Quantum-Computation.html">&lt;p&gt;Banyak orang yang menyalahpahami bahwa ilmu berkaitan dengan Komputasi Quantum terdengar seperti &lt;em&gt;lo-fi hip-hop&lt;/em&gt; dari Mamang Kesbor, mengawang-awang. Ditambah lagi bahwa terkadang saya kurang puas dengan penjelasan dari buku-buku pop-science yang mencoba menjelaskan &lt;em&gt;Superposition&lt;/em&gt;. Padahal sejatinya Komputasi Quantum adalah ilmu yang aksesibel dan dapat dipelajari dimana pun selama anda mampu menggunakan Google-Fu dengan baik.&lt;/p&gt;
+
+&lt;p&gt;Tulisan ini akan mencoba menjelaskan secara singkat bahwa bagian mendasar dari Komputasi Quantum (setidaknya &lt;em&gt;Superposition&lt;/em&gt;) dapat mudah dimengerti, dengan catatan anda mengerti sedikit tentang bilangan biner, geometri, probabilitas dan menghitung matrix.&lt;/p&gt;
+
+&lt;p&gt;Langsung saja kita mulai penjelasan awamnya.&lt;/p&gt;
+
+&lt;p&gt;Setiap yang mempelajari tentang Komputasi Quantum tentunya pernah mendengar tentang Qubit. Namun apa itu Qubit?
+Komputasi Digital mengenal istilah Bit, dimana direpresantasikan dengan 0 dan 1. 0 sebagai &lt;em&gt;Off&lt;/em&gt;. 1 sebagai &lt;em&gt;On&lt;/em&gt;.
+Begitu juga dengan Qubit. Qubit, yang kependekan dari Quantum Bit, juga serupa dengan Bit yang ada di dunia Digital. Hanya saja, Qubit memiliki fitur yang dinamakan sebagai &lt;em&gt;superposition&lt;/em&gt;, dimana sebuah Qubit bisa berada di dalam kondisi antara 0 dan 1. Atau bisa dituliskan sebagai:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+  |\psi \rangle = \alpha |0 \rangle + \beta |1 \rangle
+&lt;/script&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;|\psi \rangle&lt;/script&gt; adalah yang tadi kita sebut sebagai &lt;em&gt;superposition&lt;/em&gt;. Namun di ruas kanan dari persamaan di atas, kita bisa melihat angka 0 dan 1 dituliskan di antara notasi yang sama dengan yang digunakan oleh &lt;script type=&quot;math/tex&quot;&gt;\psi&lt;/script&gt; pada ruas kanan.
+Notasi ini dikenal sebagai Notasi Dirac. Notasi ini menggambarkan keadaan 1 Qubit yang bisa saja bernilai 0 ataupun 1.&lt;/p&gt;
+
+&lt;p&gt;Sementara untuk memahami &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; dan &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt;, kita perlu mengingat kembali Teorema Pythagoras.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+  a^2 + b^2 = c^2
+&lt;/script&gt;
+
+&lt;p&gt;Nah, &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; dan &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt; ini adalah bilangan kompleks, yang mana bisa kita gantikan posisinya daripada variabel a dan b pada teorema di atas. Namun, &lt;script type=&quot;math/tex&quot;&gt;c^2&lt;/script&gt; haruslah bernilai 1.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+  |\alpha|^2 + |\beta|^2 = 1
+&lt;/script&gt;
+
+&lt;p&gt;Sebagai contoh, bagaimana cara menggambarkan bahwa sebuah Qubit memiliki probabilitas &lt;script type=&quot;math/tex&quot;&gt;\vert \alpha \vert^2 = 50\%&lt;/script&gt; untuk keadaan &lt;script type=&quot;math/tex&quot;&gt;\vert 0 \rangle&lt;/script&gt; dan &lt;script type=&quot;math/tex&quot;&gt;\vert \beta \vert^2 = 50\%&lt;/script&gt; untuk keadaan &lt;script type=&quot;math/tex&quot;&gt;\vert 1 \rangle&lt;/script&gt; ?&lt;/p&gt;
+
+&lt;p&gt;Seperti yang kita tahu. Bahwa,
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+  50\% + 50\% = 1
+&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Karena itu, kita mulai menuliskannya dengan cara seperti berikut.
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+  50\%|0\rangle + 50\%|1\rangle
+&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Cara menulis kita di atas merupakan cara yang tidak konvensional untuk digunakan dalam menggambarkan kondisi superposisi. Oleh karenanya, mesti kita ubah lagi bentuknya.&lt;/p&gt;
+
+&lt;p&gt;Kita bisa menukar &lt;script type=&quot;math/tex&quot;&gt;50\%&lt;/script&gt; ke dalam bentuk lain agar bentuknya menjadi &lt;script type=&quot;math/tex&quot;&gt;\alpha^2&lt;/script&gt;.
+Tentunya kita bisa menuliskan menjadi,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+  50\% = \left(\sqrt \frac{1}{2}\right) ^2 = \frac{1}{\sqrt 2}
+&lt;/script&gt;
+
+&lt;p&gt;Maka, kita bisa menuliskan contoh kasus di atas menjadi seperti berikut.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+  \frac{1}{\sqrt 2} |0 \rangle + \frac{1}{\sqrt 2} |1 \rangle
+&lt;/script&gt;
+
+&lt;p&gt;Jadinya, kita baru saja merubahnya menjadi seperti berikut.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\require{AMScd}
+\begin{CD}
+    50\%|0\rangle + 50\%|1\rangle @&gt;{\text{transformed}}&gt;&gt; \frac{1}{\sqrt 2} |0 \rangle + \frac{1}{\sqrt 2} |1 \rangle
+\end{CD}
+&lt;/script&gt;
+
+&lt;p&gt;Komposisi dari &lt;em&gt;superposition&lt;/em&gt; bisa saja bermacam-macam. Jika pada contoh di atas kita menggunakan komposisi &lt;script type=&quot;math/tex&quot;&gt;50\%\vert 0\rangle + 50\%\vert 1\rangle&lt;/script&gt; pada 1 Qubit, pada kasus lain komposisinya seperti berikut.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\require{AMScd}
+\begin{CD}
+    75\%|0\rangle + 25\%|1\rangle @&gt;{\text{transformed}}&gt;&gt; \frac{\sqrt 3}{2} |0 \rangle + \frac{1}{2} |1 \rangle
+\end{CD}
+&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\require{AMScd}
+\begin{CD}
+    20\%|0\rangle + 80\%|1\rangle @&gt;{\text{transformed}}&gt;&gt; \sqrt\frac{1}{5} |0 \rangle + \frac{2}{\sqrt 5} |1 \rangle
+\end{CD}
+&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\require{AMScd}
+\begin{CD}
+    60\%|0\rangle + 40\%|1\rangle @&gt;{\text{transformed}}&gt;&gt; \sqrt\frac{6}{10} |0 \rangle + \sqrt\frac{2}{5} |1 \rangle
+\end{CD}
+&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+,etc.
+&lt;/script&gt;
+
+&lt;p&gt;Masih bingung dengan konsep di atas?&lt;/p&gt;
+
+&lt;p&gt;Jika masih di rasa sulit, karena konsep di atas berkaitan dengan Teorema Pythagoras, cukup bayangkan saja segitiga siku-siku yang sisi miringnya (&lt;em&gt;hypotenuse&lt;/em&gt;) bernilai 1. Tugas kalian adalah mencari nilai sisi samping (&lt;em&gt;adjacent&lt;/em&gt;) dan sisi depannya (&lt;em&gt;opposite&lt;/em&gt;).
+Nilai dari &lt;em&gt;adjacent&lt;/em&gt; dan &lt;em&gt;opposite&lt;/em&gt; itulah yang merupakan nilai dari &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; dan &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Saya yakin apabila pemahaman tentang geometri dasar dan probabilitas dasar kita cukup baik, sampai tahap ini tentunya tidak ada kesulitan berarti untuk memahami konsep ini.&lt;/p&gt;
+
+&lt;p&gt;Okay, pada 1 Qubit terdapat kondisi &lt;script type=&quot;math/tex&quot;&gt;\vert 0\rangle&lt;/script&gt; dan &lt;script type=&quot;math/tex&quot;&gt;\vert 1\rangle&lt;/script&gt;. Bagaimana dengan jumlah Qubit yang lebih dari 1?&lt;/p&gt;
+
+&lt;p&gt;Pada bagian ini, setidaknya kita perlu memahami tentang konsep bilangan biner. Berikut adalah tablenya.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Banyak Qubit&lt;/th&gt;
+      &lt;th&gt;Banyak kondisi&lt;/th&gt;
+      &lt;th&gt;Kondisi&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;\vert 0\rangle , \vert 1\rangle&lt;/script&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;\vert 00\rangle , \vert 01\rangle , \vert 10\rangle , \vert 11\rangle&lt;/script&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;\vert 000\rangle , \vert 001\rangle , \vert 010\rangle , \vert 011\rangle , \vert 100\rangle , \vert 101\rangle , \vert 110\rangle , \vert 111\rangle&lt;/script&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;…&lt;/td&gt;
+      &lt;td&gt;…&lt;/td&gt;
+      &lt;td&gt;…&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;x&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;2^x&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;etc.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Meningkatnya jumlah Qubit membuat banyak kemungkinan kondisi juga ikut bertambah secara exponensial &lt;script type=&quot;math/tex&quot;&gt;(2^x)&lt;/script&gt;. Jika kita telah memahami konsep bilangan biner, ini pun tidaklah terlalu sulit.&lt;/p&gt;
+
+&lt;p&gt;Kita akan masuk ke bagian yang agak &lt;em&gt;tricky&lt;/em&gt;. Yaitu Matrix, sub-bagian dari Aljabar Linear.&lt;/p&gt;
+
+&lt;p&gt;Sedari tadi kita hanya menyebut kondisi dari 1 Qubit dengan &lt;script type=&quot;math/tex&quot;&gt;\vert 0\rangle&lt;/script&gt; dan &lt;script type=&quot;math/tex&quot;&gt;\vert 1\rangle&lt;/script&gt;. Sejatinya Notasi Dirac tersebut bisa digambarkan dengan matrix seperti berikut.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\require{AMScd}
+\begin{CD}
+    |0\rangle @&gt;{\text{equal}}&gt;&gt; \begin{bmatrix} 1 \\ 0 \end{bmatrix}
+\end{CD}
+&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\require{AMScd}
+\begin{CD}
+    |1\rangle @&gt;{\text{equal}}&gt;&gt; \begin{bmatrix} 0 \\ 1 \end{bmatrix}
+\end{CD}
+&lt;/script&gt;
+
+&lt;p&gt;Untuk 2 Qubit, maka seperti berikut.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\require{AMScd}
+\begin{CD}
+    |00\rangle @&gt;{\text{equal}}&gt;&gt; \begin{bmatrix} 1\\0\\0\\0 \end{bmatrix}
+\end{CD}
+&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\require{AMScd}
+\begin{CD}
+    |01\rangle @&gt;{\text{equal}}&gt;&gt; \begin{bmatrix} 0\\1\\0\\0 \end{bmatrix}
+\end{CD}
+&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\require{AMScd}
+\begin{CD}
+    |10\rangle @&gt;{\text{equal}}&gt;&gt; \begin{bmatrix} 0\\0\\1\\0 \end{bmatrix}
+\end{CD}
+&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\require{AMScd}
+\begin{CD}
+    |11\rangle @&gt;{\text{equal}}&gt;&gt; \begin{bmatrix} 0\\0\\0\\1 \end{bmatrix}
+\end{CD}
+&lt;/script&gt;
+
+&lt;p&gt;Dengan contoh di atas, setidaknya kita bisa membayangkan bentuk matrixnya apabila Qubitnya berjumlah 3, 4, 5, dst.&lt;/p&gt;
+
+&lt;p&gt;Sekarang tugas kita adalah bagaimana caranya untuk membuat &lt;script type=&quot;math/tex&quot;&gt;\vert 00 \rangle&lt;/script&gt; menjadi ke kondisi superposisi &lt;script type=&quot;math/tex&quot;&gt;\frac{1}{\sqrt 2}\vert 01 \rangle + \frac{1}{\sqrt 2}\vert 10 \rangle&lt;/script&gt;. Untuk mengubahnya kita memerlukan gerbang Quantum. Jadi, bisa digambarkan seperti ini.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\require{AMScd}
+\begin{CD}
+    |00\rangle @&gt;{\text{quantum gate}}&gt;&gt; \frac{1}{\sqrt 2}|01\rangle + \frac{1}{\sqrt 2}|10\rangle
+\end{CD}
+&lt;/script&gt;
+
+&lt;p&gt;Atau dalam bentuk matrix&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\require{AMScd}
+\begin{CD}
+    \begin{bmatrix} 1\\0\\0\\0 \end{bmatrix} @&gt;{\text{quantum gate}}&gt;&gt; \begin{bmatrix} 0\\ \sqrt{1/2} \\ \sqrt{1/2} \\0 \end{bmatrix}
+\end{CD}
+&lt;/script&gt;
+
+&lt;p&gt;Gerbang Quantum yang dibutuhkan adalah matrix seperti berikut.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+    \begin{bmatrix} 0 &amp; 1 &amp; 0 &amp; 0\\
+    \sqrt{1/2} &amp; 0 &amp; \sqrt{1/2} &amp; 0\\
+    \sqrt{1/2} &amp; 0 &amp; -\sqrt{1/2} &amp; 0\\
+    0&amp;0&amp;0&amp;1 \end{bmatrix}
+&lt;/script&gt;
+
+&lt;p&gt;Dengan mengalikan &lt;script type=&quot;math/tex&quot;&gt;\vert 00\rangle&lt;/script&gt; dengan matrix di atas, maka kita dapat membuat kondisi superposisi.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+    \begin{bmatrix} 0 &amp; 1 &amp; 0 &amp; 0\\
+    \sqrt{1/2} &amp; 0 &amp; \sqrt{1/2} &amp; 0\\
+    \sqrt{1/2} &amp; 0 &amp; -\sqrt{1/2} &amp; 0\\
+    0&amp;0&amp;0&amp;1 \end{bmatrix} \times \begin{bmatrix} 1\\0\\0\\0 \end{bmatrix} = \begin{bmatrix} 0\\ \sqrt{1/2} \\ \sqrt{1/2} \\0 \end{bmatrix}
+&lt;/script&gt;
+
+&lt;p&gt;Begitulah sekiranya cara membuat membuat Qubit ke kondisi superposisi.&lt;/p&gt;</content><author><name>1kb</name></author><category term="documentation" /><category term="sample" /><summary type="html">Banyak orang yang menyalahpahami bahwa ilmu berkaitan dengan Komputasi Quantum terdengar seperti lo-fi hip-hop dari Mamang Kesbor, mengawang-awang. Ditambah lagi bahwa terkadang saya kurang puas dengan penjelasan dari buku-buku pop-science yang mencoba menjelaskan Superposition. Padahal sejatinya Komputasi Quantum adalah ilmu yang aksesibel dan dapat dipelajari dimana pun selama anda mampu menggunakan Google-Fu dengan baik.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/forest.jpg" /></entry><entry><title type="html">OpenWrt - Manual Method - Debricking TP-Link MR-3020</title><link href="http://localhost:4000/2018/03/18/debricking-mr3020.html" rel="alternate" type="text/html" title="OpenWrt - Manual Method - Debricking TP-Link MR-3020" /><published>2018-03-18T21:00:00+08:00</published><updated>2018-03-18T21:00:00+08:00</updated><id>http://localhost:4000/2018/03/18/debricking-mr3020</id><content type="html" xml:base="http://localhost:4000/2018/03/18/debricking-mr3020.html">&lt;h3 id=&quot;case&quot;&gt;Case&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;TP-Link MR3020 bricked&lt;/li&gt;
+  &lt;li&gt;TP-Link MR3020 yang digunakan adalah versi lama&lt;/li&gt;
+  &lt;li&gt;P1 sebelumnya telah disolder dengan male pin.&lt;/li&gt;
+  &lt;li&gt;Perbarui OpenWrt&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;hardware-requirements&quot;&gt;Hardware Requirements&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;PC/Laptop yang memiliki port ethernet&lt;/li&gt;
+  &lt;li&gt;USB-to-TTL YP-01&lt;/li&gt;
+  &lt;li&gt;Router TP-Link MR-3020&lt;/li&gt;
+  &lt;li&gt;Kabel untuk menghubungkan pin P1 pada MR-3020 ke USB TTL&lt;/li&gt;
+  &lt;li&gt;Kabel ethernet&lt;/li&gt;
+  &lt;li&gt;Kabel power untuk TP-Link MR-3020&lt;/li&gt;
+  &lt;li&gt;Flathead Screwdriver (untuk buka penutup MR3020)&lt;/li&gt;
+  &lt;li&gt;3 buah kabel jumper female-to-female&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;software-requirements&quot;&gt;Software Requirements&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Windows 10&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://tftpd32.jounin.net/tftpd32_download.html&quot;&gt;TFTP Server&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html&quot;&gt;PuTTY&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;../../../assets/PL2303_64bit_Installer.exe&quot;&gt;Driver Prolific2303 PL-2023HXA&lt;/a&gt; yang sesuai untuk Windows 10&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;file-requirements&quot;&gt;File Requirements&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://downloads.openwrt.org/chaos_calmer/15.05.1/ar71xx/generic/openwrt-15.05.1-ar71xx-generic-tl-mr3020-v1-squashfs-factory.bin&quot;&gt;Firmware OpenWrt TP-Link MR3020&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;preparation&quot;&gt;Preparation&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Install semua Software Requirements.&lt;/li&gt;
+  &lt;li&gt;Pastikan driver Prolific berjalan dengan benar (Tidak ada tanda warning pada Device Manager saat YP-01 dipasangkan ke USB).&lt;/li&gt;
+  &lt;li&gt;Buka penutup MR3020 dengan flathead screwdriver.&lt;/li&gt;
+  &lt;li&gt;Pada board, ada penanda P1. Dan di sebelah kiri P1, ada 4 pin. Pin yang ada pada sebelah kiri P1 adalah sebagai berikut.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;VCC&lt;/td&gt;
+      &lt;td&gt;GND&lt;/td&gt;
+      &lt;td&gt;RX&lt;/td&gt;
+      &lt;td&gt;TX&lt;/td&gt;
+      &lt;td&gt;&lt;span style=&quot;color:red&quot;&gt;P1&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Hubungkan USB-to-TTL YP-01 ke Pin P1 pada MR3020 dengan kabel jumper female-to-female&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;P1 (MR3020)&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;YP-01 (USB-to-TTL)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;VCC&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;TX&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;RXD&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;RX&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;TXD&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;GND&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;GND&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;span style=&quot;color:red&quot;&gt;&lt;strong&gt;Note : Jangan sambungkan VCC MR3020 ke VCC YP-01.&lt;/strong&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;configuration&quot;&gt;Configuration&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Pasangkan YP-01 ke Laptop&lt;/li&gt;
+  &lt;li&gt;Buka kembali Device Manager. &lt;span style=&quot;color:red&quot;&gt;Pastikan tidak ada tanda warning pada port, dan ingat nomor COM pada port tersebut&lt;/span&gt;.&lt;/li&gt;
+  &lt;li&gt;Masih pada Device Manager, klik kanan &lt;code class=&quot;highlighter-rouge&quot;&gt;Prolific USB-to-Serial Comm Port&lt;/code&gt;, pilih &lt;code class=&quot;highlighter-rouge&quot;&gt;Properties&lt;/code&gt;, pilih tab &lt;code class=&quot;highlighter-rouge&quot;&gt;Port Setting&lt;/code&gt;, dan masukkan nilai sebagai berikut.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Parameter&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Value&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Bits per second&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;115200&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Data bits&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Parity&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;None&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Stop bits&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Flow Control&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;None&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ubah IP Address komputer menjadi &lt;code class=&quot;highlighter-rouge&quot;&gt;192.168.1.100&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Firmware OpenWrt yang telah selesai diunduh memiliki nama yang panjang. Ubah menjadi namanya menjadi &lt;code class=&quot;highlighter-rouge&quot;&gt;openwrt.bin&lt;/code&gt; saja.&lt;/li&gt;
+  &lt;li&gt;Setelah di-rename, letakkan firmware tersebut dimana folder program TFTP terinstall.&lt;/li&gt;
+  &lt;li&gt;Jalankan program TFTP. Biarkan saja.&lt;/li&gt;
+  &lt;li&gt;Buka PuTTY. Pada pilihan &lt;strong&gt;Connection Type&lt;/strong&gt;, pilih &lt;strong&gt;Serial&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Masuk ke &lt;strong&gt;Category &amp;gt; Connection &amp;gt; Serial&lt;/strong&gt;. Masukkan &lt;code class=&quot;highlighter-rouge&quot;&gt;COM&amp;lt;angka serial yang tertera&amp;gt;&lt;/code&gt; pada bagian &lt;strong&gt;Select a serial line&lt;/strong&gt;. Sedangkn untuk bagian &lt;strong&gt;Configure the serial line&lt;/strong&gt;, sesuaikan dengan &lt;strong&gt;Port Setting`&lt;/strong&gt; pada &lt;strong&gt;Device Manager&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Hubungkan kabel ethernet dari laptop ke MR3020.&lt;/li&gt;
+  &lt;li&gt;Sambungkan MR3020 ke catu daya.&lt;/li&gt;
+  &lt;li&gt;Jalankan PuTTY dengan menekan tombol Open.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;installation&quot;&gt;Installation&lt;/h3&gt;
+&lt;p&gt;Pada layar Serial yang ditampilkan PuTTY, akan muncul tampilan sebagai berikut.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Net:   ag7240_enet_initialize...
+No valid address in Flash. Using fixed address
+No valid address in Flash. Using fixed address
+: cfg1 0x5 cfg2 0x7114
+eth0: 00:03:7f:09:0b:ad
+ag7240_phy_setup
+eth0 up
+: cfg1 0xf cfg2 0x7214
+eth1: 00:03:7f:09:0b:ad
+athrs26_reg_init_lan
+ATHRS26: resetting s26
+ATHRS26: s26 reset done
+ag7240_phy_setup
+eth1 up
+eth0, eth1
+Autobooting in 1 seconds
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Jika telah muncul tulisan &lt;strong&gt;Autobooting in 1 seconds&lt;/strong&gt;, segera ketik &lt;code class=&quot;highlighter-rouge&quot;&gt;tpl&lt;/code&gt;. Sehingga pada layar Serial akan muncul,&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hornet&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Note : Jika terlambat saat mengetik &lt;code class=&quot;highlighter-rouge&quot;&gt;tpl&lt;/code&gt;, cabut catu daya, dan hubungkan kembali. Lakukan sampai berhasil masuk ke mode &lt;code class=&quot;highlighter-rouge&quot;&gt;hornet&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Jika sudah berhasil, lakukan perintah berikut.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hornet&amp;gt; setenv ipaddr 192.168.1.111
+hornet&amp;gt; setenv serverip 192.168.1.100
+hornet&amp;gt; tftpboot 0x80000000 openwrt.bin
+eth1 link down
+dup 1 speed 100
+Using eth0 device
+TFTP from server 192.168.1.100; our IP address is 192.168.1.111
+Filename 'openwrt.bin'.
+Load address: 0x80000000
+Loading: #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         ######################################################
+done
+Bytes transferred = 3932160 (3c0000 hex)
+hornet&amp;gt; erase 0x9f020000 +0x3c0000
+
+First 0x2 last 0x3d sector size 0x10000                                                                                                        61
+Erased 60 sectors
+hornet&amp;gt; cp.b 0x80000000 0x9f020000 0x3c0000
+Copy to Flash... write addr: 9f020000
+
+done
+hornet&amp;gt; bootm 9f020000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Selesai.
+TP-Link MR3020 dengan firmware OpenWrt telah siap digunakan. Lepas semua kabel, dan tutup kembali case MR3020.&lt;/p&gt;</content><author><name>1kb</name></author><category term="debrick openwrt mr3020 tplink" /><summary type="html">Case TP-Link MR3020 bricked TP-Link MR3020 yang digunakan adalah versi lama P1 sebelumnya telah disolder dengan male pin. Perbarui OpenWrt</summary></entry><entry><title type="html">Piratebox 1.1.4 on OpenWrt TP-Link MR-3020</title><link href="http://localhost:4000/2018/03/18/piratebox-1.1.4.html" rel="alternate" type="text/html" title="Piratebox 1.1.4 on OpenWrt TP-Link MR-3020" /><published>2018-03-18T21:00:00+08:00</published><updated>2018-03-18T21:00:00+08:00</updated><id>http://localhost:4000/2018/03/18/piratebox-1.1.4</id><content type="html" xml:base="http://localhost:4000/2018/03/18/piratebox-1.1.4.html">&lt;h3 id=&quot;case&quot;&gt;Case&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;TP-Link MR-3020 sebelumnya pernah terinstall Piratebox. Namun ingin dilakukan fresh install karena lupa password untuk mengakses ke OpenWrt.&lt;/li&gt;
+  &lt;li&gt;P1 sebelumnya telah disolder dengan male pin.&lt;/li&gt;
+  &lt;li&gt;Ubah ke Piratebox 1.1.4&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;-update&quot;&gt;&lt;span style=&quot;color:red&quot;&gt; Update&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span style=&quot;color:red&quot;&gt; Instruksi ini tidak berlaku terhadap TP-Link MR3020 yang baru (v3). Hanya untuk versi &amp;lt;= v1.9&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;debricking&quot;&gt;Debricking&lt;/h3&gt;
+&lt;p&gt;Sebelum melakukan instruksi lebih lanjut, lakukan debricking terlebih dahulu. Adapun tutorial debricking dapat dilihat pada tautan &lt;a href=&quot;/2018/03/18/debricking-mr3020.html&quot;&gt;ini&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;hardware-requirements&quot;&gt;Hardware Requirements&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Router TP-Link MR-3020&lt;/li&gt;
+  &lt;li&gt;Kabel power untuk TP-Link MR-3020&lt;/li&gt;
+  &lt;li&gt;Flashdisk 16GB (Harus USB 2)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;software-requirements&quot;&gt;Software Requirements&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Windows 10&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://winscp.net/eng/download.php&quot;&gt;Winscp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;file-requirements&quot;&gt;File Requirements&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stable.openwrt.piratebox.de/auto/install_piratebox.zip&quot;&gt;install_piratebox.zip&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stable.openwrt.piratebox.de/auto/openwrt-ar71xx-generic-tl-mr3020-v1-squashfs-factory.bin&quot;&gt;Firmware OpenWrt untuk auto-install Piratebox&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;preparation&quot;&gt;Preparation&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Arahkan switch MR3020 pada mode &lt;strong&gt;3G Mode&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Bersihkan isi dari Flashdisk (bila ada isinya).&lt;/li&gt;
+  &lt;li&gt;Ekstrak &lt;strong&gt;install_piratebox.zip&lt;/strong&gt; ke Flashdisk.&lt;/li&gt;
+  &lt;li&gt;Jika selesai, eject Flashdisk.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;winscp&quot;&gt;Winscp&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Install Winscp.&lt;/li&gt;
+  &lt;li&gt;Hubungkan laptop ke router yang telah terpasang OpenWrt via Wi-Fi.&lt;/li&gt;
+  &lt;li&gt;Masukkan parameter sebagai berikut.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Parameter&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Value&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;File Protocol&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;SCP&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Hostname&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;192.168.1.1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;User name&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;root&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Password&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;(Bila telah menggunakan password, maka harus diisi)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Rename image OpenWrt yang khusus untuk auto-install Piratebox dengan nama &lt;code class=&quot;highlighter-rouge&quot;&gt;openpirate.bin&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Pada Winscp, pindahkan &lt;code class=&quot;highlighter-rouge&quot;&gt;openpirate.bin&lt;/code&gt; ke &lt;code class=&quot;highlighter-rouge&quot;&gt;/tmp&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Jika telah selesai memindahkan, keluar dari Winscp. Biarkan MR3020 tetap menyala.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;installation&quot;&gt;Installation&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Gunakan PuTTY, masuk ke &lt;code class=&quot;highlighter-rouge&quot;&gt;192.168.1.1&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Masuk ke &lt;code class=&quot;highlighter-rouge&quot;&gt;/tmp&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /tmp
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Setelahnya, jalankan perintah &lt;code class=&quot;highlighter-rouge&quot;&gt;sysupgrade&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sysupgrade -n openpirate.bin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Tunggu sampai MR3020 restart 2 kali. Untuk proses retart yang dilakukan router, perhatikan lampu atau akses Serial Putty. Jika akses Serial terhenti, artinya router telah merestart. Masuk lagi ke Serial, dan tunggu sekali lagi.&lt;/li&gt;
+  &lt;li&gt;Jika telah selesai, cabut dari MR3020 dari catu daya.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;plug--pray&quot;&gt;Plug &amp;amp; Pray&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Pasangkan Flashdisk ke MR3020 dan hubungkan kembali ke catu daya.&lt;/li&gt;
+  &lt;li&gt;Tunggu sekitar 50 menit. &lt;strong&gt;Jangan sampai pada proses ini MR3020 kehilangan daya. Jika terjadi, MR3020 akan brick, dan harus di-debrick dari awal.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Selesai. Piratebox telah bisa digunakan.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>1kb</name></author><category term="piratebox openwrt mr3020 tplink" /><summary type="html">Case TP-Link MR-3020 sebelumnya pernah terinstall Piratebox. Namun ingin dilakukan fresh install karena lupa password untuk mengakses ke OpenWrt. P1 sebelumnya telah disolder dengan male pin. Ubah ke Piratebox 1.1.4</summary></entry><entry><title type="html">Realtek RTL8821AE on Debian</title><link href="http://localhost:4000/2018/03/17/realtek-repair.html" rel="alternate" type="text/html" title="Realtek RTL8821AE on Debian" /><published>2018-03-17T21:00:00+08:00</published><updated>2018-03-17T21:00:00+08:00</updated><id>http://localhost:4000/2018/03/17/realtek-repair</id><content type="html" xml:base="http://localhost:4000/2018/03/17/realtek-repair.html">&lt;h3 id=&quot;case&quot;&gt;Case&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Wi-Fi signal pada Asus E202S lemah&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;analyze&quot;&gt;Analyze&lt;/h3&gt;
+&lt;p&gt;Pada beberapa kasus, Wi-Fi card dilengkapi dengan 2 antena, namun yang diaktifkan oleh drivernya adalah antena yang lemah. Maka driver Realtek harus diinstall kembali dengan memilih antena yang lebih kuat.&lt;/p&gt;
+
+&lt;p&gt;Untuk mengetahui driver yang digunakan, gunakan perintah :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;lsmod | grep rtl[0-9]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Output dengan angka tersebut merupakan nama dari driver yang kita perlukan.&lt;/p&gt;
+&lt;h3 id=&quot;installation&quot;&gt;Installation&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Download driver Realtek dari &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt;. Dan install driver tersebut.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/lwfinger/rtlwifi_new
+cd rtlwifi_new
+sudo make install
+sudo modprobe -rv rtl8821ae
+sudo modprobe -v rtl8821ae ant_sel=2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Jika tidak ada perubahan, ubah &lt;code class=&quot;highlighter-rouge&quot;&gt;ant_sel=2&lt;/code&gt; ke &lt;code class=&quot;highlighter-rouge&quot;&gt;ant_sel=1&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo modprobe -v rtl8821ae ant_sel=1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Jika telah berhasil, (misal dengan &lt;code class=&quot;highlighter-rouge&quot;&gt;ant_sel=2&lt;/code&gt;), buat perintah agar menjadi permanen.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;echo &quot;options rtl8821ae ant_sel=2&quot; | sudo tee /etc/modprobe.d/50-rtl8821ae.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;notes&quot;&gt;Notes&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ubah nilai &lt;code class=&quot;highlighter-rouge&quot;&gt;ant_sel&lt;/code&gt; sesuai antena yang kuat.&lt;/li&gt;
+  &lt;li&gt;Update sistem operasi dapat menghilangkan konfigurasi. Untuk itu, buat Bash script (tanpa baris &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt;) untuk dijalankan setelah update sistem operasi dijalankan.&lt;/li&gt;
+  &lt;li&gt;Pada beberapa kasus, Wi-Fi tidak bisa digunakan di saat bluetooth aktif.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>1kb</name></author><category term="linux debian ubuntu elementaryos grub" /><summary type="html">Case Wi-Fi signal pada Asus E202S lemah</summary></entry><entry><title type="html">chroot Jail (Repair GRUB)</title><link href="http://localhost:4000/2018/03/17/chroot-jail.html" rel="alternate" type="text/html" title="chroot Jail (Repair GRUB)" /><published>2018-03-17T20:00:00+08:00</published><updated>2018-03-17T20:00:00+08:00</updated><id>http://localhost:4000/2018/03/17/chroot-jail</id><content type="html" xml:base="http://localhost:4000/2018/03/17/chroot-jail.html">&lt;h3 id=&quot;case&quot;&gt;Case&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;OS terinstall. Namun Grub tidak ada.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;requirement&quot;&gt;Requirement&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Debian-based Live-USB&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;installation&quot;&gt;Installation&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Buka GParted untuk melihat partisi mana yang terpasang Linux (Debian-based)&lt;/li&gt;
+  &lt;li&gt;Mounting partisi tersebut ke &lt;code class=&quot;highlighter-rouge&quot;&gt;/mnt&lt;/code&gt;. (Misal: Linux ditemukan terinstall pada &lt;code class=&quot;highlighter-rouge&quot;&gt;sda1&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo mount /dev/sda1 /mnt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;Lakukan binding&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo mount --bind /dev /mnt/dev
+sudo mount --bind /dev/pts /mnt/dev/pts
+sudo mount --bind /proc /mnt/proc
+sudo mount --bind /sys /mnt/sys
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;Gunakan &lt;code class=&quot;highlighter-rouge&quot;&gt;chroot&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo chroot
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Install Grub. Hanya gunakan huruv drive, tanpa angka partisi.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;grub-install /dev/sda
+grub-install --recheck /dev/sda
+update-grub
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;umount&lt;/code&gt; semuanya dan &lt;code class=&quot;highlighter-rouge&quot;&gt;poweroff&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;exit
+sudo umount /mnt/sys
+sudo umount /mnt/proc
+sudo umount /mnt/dev/pts
+sudo umount /mnt/dev
+sudo umount /mnt/
+sudo poweroff
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;notes&quot;&gt;Notes&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Kasus : Dual-boot Windows dan Linux. Namun Windows tidak tertera pada Grub.&lt;br /&gt;
+Apabila sudah berhasil masuk ke dalam Linux, namun tidak ditemui Windows pada Grub, kembali install Grub saat di dalam Linux.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>1kb</name></author><category term="linux debian ubuntu elementaryos grub" /><summary type="html">Case OS terinstall. Namun Grub tidak ada.</summary></entry><entry><title type="html">elementary OS (Loki 0.4.1)</title><link href="http://localhost:4000/2018/03/16/elementary-os.html" rel="alternate" type="text/html" title="elementary OS (Loki 0.4.1)" /><published>2018-03-16T19:00:00+08:00</published><updated>2018-03-16T19:00:00+08:00</updated><id>http://localhost:4000/2018/03/16/elementary-os</id><content type="html" xml:base="http://localhost:4000/2018/03/16/elementary-os.html">&lt;h3 id=&quot;case&quot;&gt;Case&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Grub rusak&lt;/li&gt;
+  &lt;li&gt;Partisi Linux Ext4 hilang&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;must-do&quot;&gt;Must-do&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Perlu ganti distribusi&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;requirements&quot;&gt;Requirements&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;PC / Laptop yang akan di reinstall&lt;/li&gt;
+  &lt;li&gt;elementary OS (Loki 0.4.1)&lt;/li&gt;
+  &lt;li&gt;Flashdisk 8GB&lt;/li&gt;
+  &lt;li&gt;PC / Laptop yang tidak rusak (untuk membuat USB Boot)&lt;/li&gt;
+  &lt;li&gt;Etcher&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;instalation&quot;&gt;Instalation&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Buat Bootable USB dengan Etcher&lt;/li&gt;
+  &lt;li&gt;Karena elementary OS mirip dengan Ubuntu, maka install selayaknya menginstall Ubuntu&lt;/li&gt;
+  &lt;li&gt;Di saat penginstalan berlangsung, jangan centang pilihan “Third Party”&lt;/li&gt;
+  &lt;li&gt;Tunggu hingga selesai&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;what-if&quot;&gt;What If…&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Grub masih hilang :&lt;br /&gt;
+Repair Grub dengan metode &lt;a href=&quot;/2018/03/17/chroot-jail.html&quot;&gt;chroot jail&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Instalasi berhasil :&lt;br /&gt;
+Periksa Wi-Fi signal strength. Jika buruk, &lt;a href=&quot;/2018/03/17/realtek-repair.html&quot;&gt;reinstall driver Realtek&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;notes&quot;&gt;Notes&lt;/h3&gt;
+&lt;p&gt;Instalasi dilakukan pada Asus E202S&lt;/p&gt;</content><author><name>1kb</name></author><category term="elementaryos linux" /><summary type="html">Case Grub rusak Partisi Linux Ext4 hilang</summary></entry><entry><title type="html">First !!!</title><link href="http://localhost:4000/first.html" rel="alternate" type="text/html" title="First !!!" /><published>2018-03-15T17:00:00+08:00</published><updated>2018-03-15T17:00:00+08:00</updated><id>http://localhost:4000/first</id><content type="html" xml:base="http://localhost:4000/first.html">&lt;p&gt;Ini post pertama. Sekedar penanda awal.&lt;/p&gt;</content><author><name>1kb</name></author><summary type="html">Ini post pertama. Sekedar penanda awal.</summary></entry></feed>
